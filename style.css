@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 217, 255, 0.877) 30%,
+    rgba(0, 128, 111, 0.9321) 70%
+  );
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 200px;
+  height: 150px;
+  animation: SlideSide 5s;
+  border-radius: 5px;
+}
+
+.card {
+  width: 200px;
+  max-height: 290px;
+  margin: 20px;
+  margin-top: 10px;
+  animation: SlideUp 3s;
+  font-size: 0.8rem !important;
+}
+
+@keyframes SlideUp {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes SlideSide {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
